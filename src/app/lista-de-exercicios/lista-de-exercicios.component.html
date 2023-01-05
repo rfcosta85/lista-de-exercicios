@@ -1,0 +1,34 @@
+<section class="tema-lista-de-exercicios">
+    <h1 class="tema-lista-de-exercicios__titulo">Lista de exercícios</h1>
+    <div class="tema-lista-de-exercicios__filtros">
+        <input type="text" class="tema-lista-de-exercicios__filtros--input" placeholder="Pesquisar" (input)="onSelectFiltroDeCategoriaChange()" [(ngModel)]="termoDeBusca" >
+        <select class="tema-lista-de-exercicios__filtros--select" (change)="onSelectFiltroDeCategoriaChange()" [(ngModel)]="termoDaCategoria">
+            <option [value]="-1">Todas as Categorias</option>
+            <option [value]="0">Expressões</option>
+            <option [value]="1">Sequência</option>
+            <option [value]="2">Decisão</option>
+        </select>
+    </div>
+    <div class="tema-lista-de-exercicios__tabela">
+        <table class="tema-lista-de-exercicios__tabela--corpo-tabela">
+            <tr>
+                <th>Exercício</th>
+                <th>Descrição</th>
+                <th>Categoria</th>
+                <th>Resolução</th>
+            </tr>
+            <tr *ngFor="let exercicio of filtroExerciciosArray" >
+                <td>{{ exercicio.numero }}</td>
+                <td>{{ exercicio.descricao }}</td>
+                <ng-container [ngSwitch]="exercicio.categoria">
+                    <td>
+                        <p *ngSwitchCase="categoriaEnum.expressao">Expressão</p>
+                        <p *ngSwitchCase="categoriaEnum.sequencia">Sequência</p>
+                        <p *ngSwitchCase="categoriaEnum.decisao">Decisão</p>
+                    </td>
+                </ng-container>
+                <td><button class="botao-acao" (click)="onBtnResolucaoClick(exercicio)">Resolução</button></td>
+            </tr>            
+        </table>        
+    </div>
+</section>
