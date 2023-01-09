@@ -1,3 +1,4 @@
+import { Exercicio9 } from './exercicio9';
 import { ExerciciosBD } from '../models/exercicios.model';
 import { Exercicio6 } from './exercicio6';
 import { Exercicio7 } from './exercicio7';
@@ -7,14 +8,8 @@ export const ListaExerciciosMock: ExerciciosBD[] = [
   new Exercicio6(),
   new Exercicio7(),
   new Exercicio8(),
-  //
-  // {
-  //   numero: 9,
-  //   descricao:
-  //     'Ler uma temperatura em graus Fahrenheit, calcular e escrever o valor equivalente em graus Celsius. A conversão é dada por:',
-  //   categoria: 1,
-  //   executar: ,
-  // },
+  new Exercicio9(),
+
   // {
   //   numero: 10,
   //   descricao:
