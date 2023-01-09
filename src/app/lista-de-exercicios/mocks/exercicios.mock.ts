@@ -1,18 +1,13 @@
 import { ExerciciosBD } from '../models/exercicios.model';
 import { Exercicio6 } from './exercicio6';
 import { Exercicio7 } from './exercicio7';
+import { Exercicio8 } from './exercicio8';
 
 export const ListaExerciciosMock: ExerciciosBD[] = [
   new Exercicio6(),
   new Exercicio7(),
+  new Exercicio8(),
   //
-  // {
-  //   numero: 8,
-  //   descricao:
-  //     'Ler uma quantidade de chuva dada em polegadas, calcular e escrever o valor equivalente em milímetros. Sabe-se que 1 corresponde a 25,4mm',
-  //   categoria: 1,
-  //   executar: ,
-  // },
   // {
   //   numero: 9,
   //   descricao:
