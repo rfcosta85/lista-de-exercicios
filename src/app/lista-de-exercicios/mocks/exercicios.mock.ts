@@ -3,20 +3,15 @@ import { ExerciciosBD } from '../models/exercicios.model';
 import { Exercicio6 } from './exercicio6';
 import { Exercicio7 } from './exercicio7';
 import { Exercicio8 } from './exercicio8';
+import { Exercicio10 } from './exercicio10';
 
 export const ListaExerciciosMock: ExerciciosBD[] = [
   new Exercicio6(),
   new Exercicio7(),
   new Exercicio8(),
   new Exercicio9(),
+  new Exercicio10(),
 
-  // {
-  //   numero: 10,
-  //   descricao:
-  //     'Ler os valores S1, S2 e S3 correspondentes aos comprimentos dos três lados de um triângulo, calcular e escrever a sua área. A área do triângulo é dada por:',
-  //   categoria: 1,
-  //   executar: ,
-  // },
   // {
   //   numero: 11,
   //   descricao:
