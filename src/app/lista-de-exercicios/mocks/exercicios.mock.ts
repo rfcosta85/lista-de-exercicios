@@ -4,6 +4,7 @@ import { Exercicio6 } from './exercicio6';
 import { Exercicio7 } from './exercicio7';
 import { Exercicio8 } from './exercicio8';
 import { Exercicio10 } from './exercicio10';
+import { Exercicio11 } from './exercicio11';
 
 export const ListaExerciciosMock: ExerciciosBD[] = [
   new Exercicio6(),
@@ -11,14 +12,8 @@ export const ListaExerciciosMock: ExerciciosBD[] = [
   new Exercicio8(),
   new Exercicio9(),
   new Exercicio10(),
+  new Exercicio11(),
 
-  // {
-  //   numero: 11,
-  //   descricao:
-  //     'Ler um valor R correspondente ao raio de uma esfera, calcular e escrevero seu volume e a sua área.',
-  //   categoria: 1,
-  //   executar: ,
-  // },
   // {
   //   numero: 12,
   //   descricao:
