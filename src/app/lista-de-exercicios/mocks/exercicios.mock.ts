@@ -1,11 +1,12 @@
-import { Exercicio9 } from './exercicio9';
 import { ExerciciosBD } from '../models/exercicios.model';
 import { Exercicio6 } from './exercicio6';
 import { Exercicio7 } from './exercicio7';
 import { Exercicio8 } from './exercicio8';
+import { Exercicio9 } from './exercicio9';
 import { Exercicio10 } from './exercicio10';
 import { Exercicio11 } from './exercicio11';
 import { Exercicio12 } from './exercicio12';
+import { Exercicio13 } from './exercicio13';
 
 export const ListaExerciciosMock: ExerciciosBD[] = [
   new Exercicio6(),
@@ -15,21 +16,8 @@ export const ListaExerciciosMock: ExerciciosBD[] = [
   new Exercicio10(),
   new Exercicio11(),
   new Exercicio12(),
+  new Exercicio13(),
 
-  // {
-  //   numero: 12,
-  //   descricao:
-  //     'Ler o salário mensal de uma pessoa e o percentual de reajuste, calcular e escrever o valor do salário reajustado.',
-  //   categoria: 1,
-  //   executar: ,
-  // },
-  // {
-  //   numero: 13,
-  //   descricao:
-  //     'Ler o número de eleitores de um município e o número de votos brancos, nulos e válidos. Em seguida, calcular e escrever o percentual que cada tipo de voto representa em relação ao total de eleitores.',
-  //   categoria: 1,
-  //   executar: ,
-  // },
   // {
   //   numero: 14,
   //   descricao:
