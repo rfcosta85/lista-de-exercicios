@@ -5,6 +5,7 @@ import { Exercicio7 } from './exercicio7';
 import { Exercicio8 } from './exercicio8';
 import { Exercicio10 } from './exercicio10';
 import { Exercicio11 } from './exercicio11';
+import { Exercicio12 } from './exercicio12';
 
 export const ListaExerciciosMock: ExerciciosBD[] = [
   new Exercicio6(),
@@ -13,6 +14,7 @@ export const ListaExerciciosMock: ExerciciosBD[] = [
   new Exercicio9(),
   new Exercicio10(),
   new Exercicio11(),
+  new Exercicio12(),
 
   // {
   //   numero: 12,
