@@ -8,6 +8,8 @@ import { Exercicio11 } from './exercicio11';
 import { Exercicio12 } from './exercicio12';
 import { Exercicio13 } from './exercicio13';
 import { Exercicio14 } from './exercicio14';
+import { Exercicio15 } from './exercicio15';
+import { Exercicio16 } from './exercicio16';
 
 export const ListaExerciciosMock: ExerciciosBD[] = [
   new Exercicio6(),
@@ -19,28 +21,9 @@ export const ListaExerciciosMock: ExerciciosBD[] = [
   new Exercicio12(),
   new Exercicio13(),
   new Exercicio14(),
+  new Exercicio15(),
+  new Exercicio16(),
 
-  // {
-  //   numero: 14,
-  //   descricao:
-  //     '',
-  //   categoria: 1,
-  //   executar: ,
-  // },
-  // {
-  //   numero: 15,
-  //   descricao:
-  //     'Uma revendedora de carros usados paga a seus vendedores um salário fixo por mês, mais uma comissão, também fixa, para cada carro vendido e mais 5% do valor das vendas efetuadas por eles. Ler o número de carros vendidos por um vendedor, o valor total de suas vendas, o salário fixo e o valor que ele recebe por carro. Em seguida, calcular e escrever o salário mensal do vendedor.',
-  //   categoria: 1,
-  //   executar: ,
-  // },
-  // {
-  //   numero: 16,
-  //   descricao:
-  //     'O custo do seguro contra granizo numa comunidade típica de fazendeiros é 3,5% do valor de cobertura solicitado por acre, multiplicado pelo número de acres plantados. Supondo que as possibilidades de colheitas sejam limitadas a trigo, aveia e cevada, ler a cobertura desejada e o número de acres plantados para cada uma das três plantações e calcular e escrever o custo total do prêmio do seguro.',
-  //   categoria: 1,
-  //   executar: ,
-  // },
   // {
   //   numero: 17,
   //   descricao:
