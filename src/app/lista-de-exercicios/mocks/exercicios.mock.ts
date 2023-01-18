@@ -7,6 +7,7 @@ import { Exercicio10 } from './exercicio10';
 import { Exercicio11 } from './exercicio11';
 import { Exercicio12 } from './exercicio12';
 import { Exercicio13 } from './exercicio13';
+import { Exercicio14 } from './exercicio14';
 
 export const ListaExerciciosMock: ExerciciosBD[] = [
   new Exercicio6(),
@@ -17,11 +18,12 @@ export const ListaExerciciosMock: ExerciciosBD[] = [
   new Exercicio11(),
   new Exercicio12(),
   new Exercicio13(),
+  new Exercicio14(),
 
   // {
   //   numero: 14,
   //   descricao:
-  //     'O custo ao consumidor de um carro novo é dado pelo custo de fábrica mais os percentuais do distribuidor e dos impostos (aplicados ao custo de fábrica). Supondo que o percentual do distribuidor seja de 28% e os impostos de 45%, ler o custo de fábrica de um carro e escrever o custo final ao consumidor.',
+  //     '',
   //   categoria: 1,
   //   executar: ,
   // },
