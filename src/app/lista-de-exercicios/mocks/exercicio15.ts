@@ -26,7 +26,7 @@ export class Exercicio15 implements ExerciciosBD {
     const comissaoPorCarroVendido =
       totalDeCarrosVendidos * valorPorCarroVendido;
     const comissaoPeloTotalDeVendas =
-      comissaoPorCarroVendido * comissaoTotalDeVendas + comissaoPorCarroVendido;
+      valorTotalDeVendas * comissaoTotalDeVendas + comissaoPorCarroVendido;
     const salarioMes = salario + comissaoPeloTotalDeVendas;
     console.log(
       `O salário do mês será de: ${salarioMes.toLocaleString('br', {
