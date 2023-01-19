@@ -8,8 +8,8 @@ export class Exercicio7 implements ExerciciosBD {
   public executar() {
     console.clear();
     console.log('exercicio 07');
-    const primeiroNome = prompt('Digite o seu primeiro nome');
-    const sobrenome = prompt('Digite o seu sobrenome');
+    const primeiroNome = prompt('Digite o seu primeiro nome')?.trim();
+    const sobrenome = prompt('Digite o seu sobrenome')?.trim();
     console.log(`${sobrenome} ${primeiroNome}`);
   }
 }

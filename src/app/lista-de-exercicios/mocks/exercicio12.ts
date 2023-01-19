@@ -8,10 +8,10 @@ export class Exercicio12 implements ExerciciosBD {
     console.clear();
     console.log('Exercicio 12');
     const salario = Number(
-      prompt('Digite o salário atual: ')?.replace(',', '.')
+      prompt('Digite o salário atual: ')?.replace(',', '.').trim()
     );
     const reajuste = Number(
-      prompt('Digite o valor do reajuste: ')?.replace(',', '.')
+      prompt('Digite o valor do reajuste: ')?.replace(',', '.').trim()
     );
     const novoSalario = salario * (reajuste / 100) + salario;
     console.log(

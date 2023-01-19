@@ -9,7 +9,7 @@ export class Exercicio14 implements ExerciciosBD {
     console.clear();
     console.log('Exercicio 14');
     const custoCarro = Number(
-      prompt('Digite o valor do carro: ')?.replace(',', '.')
+      prompt('Digite o valor do carro: ')?.replace(',', '.').trim()
     );
     const percentualDistribuidor = 0.3;
     const impostos = 0.45;

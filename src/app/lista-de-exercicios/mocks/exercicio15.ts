@@ -8,16 +8,20 @@ export class Exercicio15 implements ExerciciosBD {
   public executar() {
     console.clear();
     console.log('Exercicio 15');
-    const salario = Number(prompt('Digite o salário: ')?.replace(',', '.'));
+    const salario = Number(
+      prompt('Digite o salário: ')?.replace(',', '.').trim()
+    );
     const comissaoTotalDeVendas = 0.05;
     const totalDeCarrosVendidos = Number(
       prompt('Digite o total de carros vendidos: ')
     );
     const valorTotalDeVendas = Number(
-      prompt('Digite o valor total das vendas: ')?.replace(',', '.')
+      prompt('Digite o valor total das vendas: ')?.replace(',', '.').trim()
     );
     const valorPorCarroVendido = Number(
-      prompt('Digite o valor recebido por carro vendido')?.replace(',', '.')
+      prompt('Digite o valor recebido por carro vendido')
+        ?.replace(',', '.')
+        .trim()
     );
     const comissaoPorCarroVendido =
       totalDeCarrosVendidos * valorPorCarroVendido;

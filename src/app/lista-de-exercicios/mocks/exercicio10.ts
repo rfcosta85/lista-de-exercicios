@@ -8,13 +8,13 @@ export class Exercicio10 implements ExerciciosBD {
     console.clear();
     console.log('Exercicio 10');
     const s1 = Number(
-      prompt('Leia o primeiro lado do triângulo')?.replace(',', '.')
+      prompt('Leia o primeiro lado do triângulo')?.replace(',', '.').trim()
     );
     const s2 = Number(
-      prompt('Leia o segundo lado do triângulo')?.replace(',', '.')
+      prompt('Leia o segundo lado do triângulo')?.replace(',', '.').trim()
     );
     const s3 = Number(
-      prompt('Leia o terceiro lado do triângulo')?.replace(',', '.')
+      prompt('Leia o terceiro lado do triângulo')?.replace(',', '.').trim()
     );
     const area = (s1 + s2 + s3) / 2;
     console.log(

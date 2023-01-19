@@ -9,7 +9,7 @@ export class Exercicio9 implements ExerciciosBD {
     console.clear();
     console.log('Exercicio 09');
     const fahrenheit = Number(
-      prompt('Digite a temperatura em Fahrenheit: ')?.replace(',', '.')
+      prompt('Digite a temperatura em Fahrenheit: ')?.replace(',', '.').trim()
     );
     const celsius = ((fahrenheit - 32) / 9) * 5;
     console.log(

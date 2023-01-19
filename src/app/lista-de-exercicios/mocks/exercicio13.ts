@@ -9,10 +9,10 @@ export class Exercicio13 implements ExerciciosBD {
     console.clear();
     console.log('Exercicio 13');
     const totalEleitores = Number(
-      prompt('Digite o total de eleitores do município: ')
+      prompt('Digite o total de eleitores do município: ')?.trim()
     );
     const votosEmBranco = Number(
-      prompt('Digite o número de votos em branco: ')
+      prompt('Digite o número de votos em branco: ')?.trim()
     );
     const votosNulos = Number(prompt('Digite a quantidade de votos nulos: '));
     const votosValidos = totalEleitores - (votosEmBranco + votosNulos);

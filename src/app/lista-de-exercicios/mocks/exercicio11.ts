@@ -8,7 +8,9 @@ export class Exercicio11 implements ExerciciosBD {
     console.clear();
     console.log('Exercício 11');
     const r = Number(
-      prompt('Digite o valor do raio a ser calculado: ')?.replace(',', '.')
+      prompt('Digite o valor do raio a ser calculado: ')
+        ?.replace(',', '.')
+        .trim()
     );
     const pi = 3.14;
     const area = pi * r ** 2;
