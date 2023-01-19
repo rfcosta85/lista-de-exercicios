@@ -9,7 +9,7 @@ export class Exercicio6 implements ExerciciosBD {
   public executar() {
     console.clear();
     console.log('exercicio 06');
-    let valor = Number(prompt('Digite um número', ''));
+    let valor = Number(prompt('Digite um número', '')?.replace(',', '.'));
     let valorAntecessor = valor - 1;
     let valorSucessor = valor + 1;
 

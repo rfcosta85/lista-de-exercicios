@@ -10,23 +10,24 @@ export class Exercicio16 implements ExerciciosBD {
     console.log('Exercício 16');
     const custoSeguro = 0.035;
     const valorDaCobertura = Number(
-      prompt('Digite o valor da Cobertura desejado: ')
+      prompt('Digite o valor da Cobertura desejado: ')?.replace(',', '.')
     );
     const acresPlantadosTrigo = Number(
-      prompt('Digite a cobertura do trigo em acres: ')
+      prompt('Digite a cobertura do trigo em acres: ')?.replace(',', '.')
     );
     const acresPlantadosAveia = Number(
-      prompt('Digite a cobertura de aveia em acres: ')
+      prompt('Digite a cobertura de aveia em acres: ')?.replace(',', '.')
     );
     const acresPlantadosCevada = Number(
-      prompt('Digite a cobertura de cevada em acres: ')
+      prompt('Digite a cobertura de cevada em acres: ')?.replace(',', '.')
     );
     const acres =
       acresPlantadosTrigo + acresPlantadosAveia + acresPlantadosCevada;
     const custototalPremioSeguro = acres * valorDaCobertura * custoSeguro;
     console.log(
-      `O prêmio do seguro será de: R$ ${custototalPremioSeguro.toLocaleString(
-        'br'
+      `O prêmio do seguro será de: ${custototalPremioSeguro.toLocaleString(
+        'br',
+        { style: 'currency', currency: 'brl' }
       )}`
     );
   }

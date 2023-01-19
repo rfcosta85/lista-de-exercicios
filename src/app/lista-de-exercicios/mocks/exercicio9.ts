@@ -8,10 +8,18 @@ export class Exercicio9 implements ExerciciosBD {
   public executar() {
     console.clear();
     console.log('Exercicio 09');
-    const fahrenheit = Number(prompt('Digite a temperatura em Fahrenheit: '));
+    const fahrenheit = Number(
+      prompt('Digite a temperatura em Fahrenheit: ')?.replace(',', '.')
+    );
     const celsius = ((fahrenheit - 32) / 9) * 5;
     console.log(
-      `${fahrenheit}°F convertido em celsius será: ${celsius.toFixed(0)}°C`
+      `${fahrenheit}°F convertido em celsius será: ${celsius.toLocaleString(
+        'br',
+        {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        }
+      )}°C`
     );
   }
 }

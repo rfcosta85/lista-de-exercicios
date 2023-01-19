@@ -7,10 +7,21 @@ export class Exercicio10 implements ExerciciosBD {
   public executar() {
     console.clear();
     console.log('Exercicio 10');
-    const s1 = Number(prompt('Leia o primeiro lado do triângulo'));
-    const s2 = Number(prompt('Leia o segundo lado do triângulo'));
-    const s3 = Number(prompt('Leia o terceiro lado do triângulo'));
+    const s1 = Number(
+      prompt('Leia o primeiro lado do triângulo')?.replace(',', '.')
+    );
+    const s2 = Number(
+      prompt('Leia o segundo lado do triângulo')?.replace(',', '.')
+    );
+    const s3 = Number(
+      prompt('Leia o terceiro lado do triângulo')?.replace(',', '.')
+    );
     const area = (s1 + s2 + s3) / 2;
-    console.log(`A área do triângulo será de: ${area.toLocaleString('br')}`);
+    console.log(
+      `A área do triângulo será de: ${area.toLocaleString('br', {
+        minimumFractionDigits: 3,
+        maximumFractionDigits: 3,
+      })}`
+    );
   }
 }

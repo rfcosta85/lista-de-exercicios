@@ -7,10 +7,17 @@ export class Exercicio11 implements ExerciciosBD {
   public executar() {
     console.clear();
     console.log('Exercício 11');
-    const r = Number(prompt('Digite o valor do raio a ser calculado: '));
+    const r = Number(
+      prompt('Digite o valor do raio a ser calculado: ')?.replace(',', '.')
+    );
     const pi = 3.14;
     const area = pi * r ** 2;
     const volume = 4 * pi * (r ** 3 / 3);
-    console.log(`Area = ${area} \nVolume = ${volume.toLocaleString('br')}`);
+    console.log(
+      `Area = ${area} \nVolume = ${volume.toLocaleString('br', {
+        minimumFractionDigits: 3,
+        maximumFractionDigits: 3,
+      })}`
+    );
   }
 }

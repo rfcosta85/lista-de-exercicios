@@ -8,7 +8,7 @@ export class Exercicio8 implements ExerciciosBD {
     console.clear();
     console.log('Exercicio 08');
     const chuvaEmPolegadas = Number(
-      prompt('Digite a quantidade de chuva em polegadas')
+      prompt('Digite a quantidade de chuva em polegadas')?.replace(',', '.')
     );
     const polegadasEmMilimetros = 25.4;
     const resultado = chuvaEmPolegadas * polegadasEmMilimetros;

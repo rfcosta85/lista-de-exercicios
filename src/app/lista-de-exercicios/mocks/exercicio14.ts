@@ -8,21 +8,37 @@ export class Exercicio14 implements ExerciciosBD {
   public executar() {
     console.clear();
     console.log('Exercicio 14');
-    const custoCarro = Number(prompt('Digite o valor do carro: '));
+    const custoCarro = Number(
+      prompt('Digite o valor do carro: ')?.replace(',', '.')
+    );
     const percentualDistribuidor = 0.3;
     const impostos = 0.45;
     const valorDoDistribuidor = custoCarro * percentualDistribuidor;
     const valorDosImpostos = custoCarro * impostos;
     const valorFinal = valorDosImpostos + valorDoDistribuidor + custoCarro;
     console.log(
-      `Custo de fabricação do veículo: R$ ${custoCarro.toLocaleString('br')}`
+      `Custo de fabricação do veículo: ${custoCarro.toLocaleString('br', {
+        style: 'currency',
+        currency: 'brl',
+      })}`
     );
     console.log(
-      `Taxa do distribuidor: R$ ${valorDoDistribuidor.toLocaleString('br')}`
+      `Taxa do distribuidor: ${valorDoDistribuidor.toLocaleString('br', {
+        style: 'currency',
+        currency: 'brl',
+      })}`
     );
-    console.log(`Taxa do imposto: R$ ${valorDosImpostos.toLocaleString('br')}`);
     console.log(
-      `Custo final ao consumidor: R$ ${valorFinal.toLocaleString('br')}`
+      `Taxa do imposto: ${valorDosImpostos.toLocaleString('br', {
+        style: 'currency',
+        currency: 'brl',
+      })}`
+    );
+    console.log(
+      `Custo final ao consumidor: R$ ${valorFinal.toLocaleString('br', {
+        style: 'currency',
+        currency: 'brl',
+      })}`
     );
   }
 }

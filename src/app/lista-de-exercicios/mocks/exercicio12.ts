@@ -7,18 +7,22 @@ export class Exercicio12 implements ExerciciosBD {
   public executar() {
     console.clear();
     console.log('Exercicio 12');
-    const salario = Number(prompt('Digite o salário atual: '));
-    const reajuste = Number(prompt('Digite o valor do reajuste: '));
+    const salario = Number(
+      prompt('Digite o salário atual: ')?.replace(',', '.')
+    );
+    const reajuste = Number(
+      prompt('Digite o valor do reajuste: ')?.replace(',', '.')
+    );
     const novoSalario = salario * (reajuste / 100) + salario;
     console.log(
-      `Salário atual: R$ ${salario.toLocaleString('br', {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
+      `Salário atual: ${salario.toLocaleString('br', {
+        style: 'currency',
+        currency: 'brl',
       })}\nReajuste: ${reajuste.toLocaleString(
         'br'
-      )}%\nNovo Salário: R$ ${novoSalario.toLocaleString('br', {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
+      )}%\nNovo Salário: ${novoSalario.toLocaleString('br', {
+        style: 'currency',
+        currency: 'brl',
       })}`
     );
   }

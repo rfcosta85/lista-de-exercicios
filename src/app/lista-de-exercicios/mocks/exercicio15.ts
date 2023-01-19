@@ -8,16 +8,16 @@ export class Exercicio15 implements ExerciciosBD {
   public executar() {
     console.clear();
     console.log('Exercicio 15');
-    const salario = Number(prompt('Digite o salário: '));
+    const salario = Number(prompt('Digite o salário: ')?.replace(',', '.'));
     const comissaoTotalDeVendas = 0.05;
     const totalDeCarrosVendidos = Number(
       prompt('Digite o total de carros vendidos: ')
     );
     const valorTotalDeVendas = Number(
-      prompt('Digite o valor total das vendas: ')
+      prompt('Digite o valor total das vendas: ')?.replace(',', '.')
     );
     const valorPorCarroVendido = Number(
-      prompt('Digite o valor recebido por carro vendido')
+      prompt('Digite o valor recebido por carro vendido')?.replace(',', '.')
     );
     const comissaoPorCarroVendido =
       totalDeCarrosVendidos * valorPorCarroVendido;
@@ -25,7 +25,10 @@ export class Exercicio15 implements ExerciciosBD {
       comissaoPorCarroVendido * comissaoTotalDeVendas + comissaoPorCarroVendido;
     const salarioMes = salario + comissaoPeloTotalDeVendas;
     console.log(
-      `O salário do mês será de: R$ ${salarioMes.toLocaleString('br')}`
+      `O salário do mês será de: ${salarioMes.toLocaleString('br', {
+        style: 'currency',
+        currency: 'brl',
+      })}`
     );
   }
 }
