@@ -1,3 +1,4 @@
+import { Exercicio18 } from './exercicio18';
 import { Exercicio17 } from './exercicio17';
 import { ExerciciosBD } from '../models/exercicios.model';
 import { Exercicio6 } from './exercicio6';
@@ -25,14 +26,8 @@ export const ListaExerciciosMock: ExerciciosBD[] = [
   new Exercicio15(),
   new Exercicio16(),
   new Exercicio17(),
+  new Exercicio18(),
 
-  // {
-  //   numero: 18,
-  //   descricao:
-  //     'Uma caixa de azulejos tem material suficiente para cobrir uma área de 1,5 m 2 . Ler as dimensões (comprimento, largura e altura) de uma cozinha retangular, calcular e escrever a quantidade de caixas de azulejos necessárias para cobrir todas as paredes. Considerar que não será descontada a área ocupada por portas e janelas.',
-  //   categoria: 1,
-  //   executar: () => {},
-  // },
   // {
   //   numero: 19,
   //   descricao:

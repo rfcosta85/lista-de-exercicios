@@ -7,15 +7,24 @@ export class Exercicio17 implements ExerciciosBD {
   public executar() {
     console.clear();
     console.log('Exercício 17');
-    const potenciaLampada = Number(prompt('Digite a potência da Lâmpada'));
-    const larguraDoComodo = Number(prompt('Digite a largura do cômodo'));
+    const potenciaLampada = Number(
+      prompt('Digite a potência da Lâmpada')?.replace(',', '.').trim()
+    );
+    const larguraDoComodo = Number(
+      prompt('Digite a largura do cômodo')?.replace(',', '.').trim()
+    );
     const comprimentoDoComodo = Number(
-      prompt('Digite o comprimento do cômodo')
+      prompt('Digite o comprimento do cômodo')?.replace(',', '.').trim()
     );
     const metroQuadrado = larguraDoComodo * comprimentoDoComodo;
     const lampadasNecessarias = metroQuadrado / potenciaLampada;
 
-    console.log(`Metros quadrados do cômodo: ${metroQuadrado} m²`);
+    console.log(
+      `Metros quadrados do cômodo: ${metroQuadrado.toLocaleString('br', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      })} m²`
+    );
     console.log(
       `Lâmpadas necessárias para iluminar o ambiente: ${lampadasNecessarias.toFixed(
         0
