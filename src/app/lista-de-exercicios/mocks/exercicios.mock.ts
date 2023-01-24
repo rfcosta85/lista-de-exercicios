@@ -1,3 +1,4 @@
+import { Exercicio17 } from './exercicio17';
 import { ExerciciosBD } from '../models/exercicios.model';
 import { Exercicio6 } from './exercicio6';
 import { Exercicio7 } from './exercicio7';
@@ -23,14 +24,8 @@ export const ListaExerciciosMock: ExerciciosBD[] = [
   new Exercicio14(),
   new Exercicio15(),
   new Exercicio16(),
+  new Exercicio17(),
 
-  // {
-  //   numero: 17,
-  //   descricao:
-  //     'A potência necessária para iluminar adequadamente um cômodo é de 18 W/m 2 . Ler a potência de uma lâmpada e as dimensões (largura e comprimento) do cômodo, calcular e escrever o número de lâmpadas necessárias para a iluminação.',
-  //   categoria: 1,
-  //   executar: ,
-  // },
   // {
   //   numero: 18,
   //   descricao:
