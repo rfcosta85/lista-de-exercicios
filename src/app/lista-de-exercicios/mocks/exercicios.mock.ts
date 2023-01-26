@@ -1,3 +1,4 @@
+import { Exercicio21 } from './exercicio21';
 import { Exercicio20 } from './exercicio20';
 import { Exercicio19 } from './exercicio19';
 import { Exercicio18 } from './exercicio18';
@@ -31,11 +32,5 @@ export const ListaExerciciosMock: ExerciciosBD[] = [
   new Exercicio18(),
   new Exercicio19(),
   new Exercicio20(),
-
-  // {
-  //   numero: 21,
-  //   descricao: 'Ler um valor e escrever se é positivo, negativo ou zero.',
-  //   categoria: 2,
-  //   executar: () => {},
-  // },
+  new Exercicio21(),
 ];
