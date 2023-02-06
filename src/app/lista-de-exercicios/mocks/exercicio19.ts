@@ -62,9 +62,8 @@ export class Exercicio19 implements ExerciciosBD {
 
     console.log(
       `Consumo médio de combustível: ${consumoMedioDeCombustivel.toLocaleString(
-        'br',
-        { style: 'currency', currency: 'brl' }
-      )}`
+        'br'
+      )} litros`
     );
 
     console.log(

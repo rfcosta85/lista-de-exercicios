@@ -1,3 +1,5 @@
+import { Exercicio28 } from './exercicio28';
+import { Exercicio27 } from './exercicio27';
 import { Exercicio26 } from './exercicio26';
 import { Exercicio25 } from './exercicio25';
 import { Exercicio24 } from './exercicio24';
@@ -43,4 +45,6 @@ export const ListaExerciciosMock: ExerciciosBD[] = [
   new Exercicio24(),
   new Exercicio25(),
   new Exercicio26(),
+  new Exercicio27(),
+  new Exercicio28(),
 ];

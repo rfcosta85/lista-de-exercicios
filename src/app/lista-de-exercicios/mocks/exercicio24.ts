@@ -1,7 +1,8 @@
 import { ExerciciosBD } from './../models/exercicios.model';
 export class Exercicio24 implements ExerciciosBD {
   public numero: number = 24;
-  public descricao: string = 'Ler três valores e escrever o menor deles.';
+  public descricao: string =
+    'Ler três valores e escrever o menor deles. (AJUSTADO)';
   public categoria: number = 2;
   public executar() {
     console.clear();
@@ -22,12 +23,12 @@ export class Exercicio24 implements ExerciciosBD {
       )}, ${valor2.toLocaleString('br')}, ${valor3.toLocaleString('br')}`
     );
 
-    if (valor1 > valor2 && valor1 > valor3) {
-      console.log(`${valor1.toLocaleString('br')} foi o maior valor digitado`);
+    if (valor1 < valor2 && valor1 < valor3) {
+      console.log(`${valor1.toLocaleString('br')} foi o menor valor digitado`);
     } else if (valor2 > valor1 && valor2 > valor3) {
-      console.log(`${valor2.toLocaleString('br')} foi o maior valor digitado`);
+      console.log(`${valor2.toLocaleString('br')} foi o menor valor digitado`);
     } else {
-      console.log(`${valor3.toLocaleString('br')} foi o maior valor digitado`);
+      console.log(`${valor3.toLocaleString('br')} foi o menor valor digitado`);
     }
   }
 }

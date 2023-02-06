@@ -3,7 +3,8 @@ export class Exercicio20 implements ExerciciosBD {
   public numero: number = 20;
   public descricao: string = `Uma equipe deseja calcular o número mínimo de litros de combustível, 
   que deve ser colocado no tanque de um carro de corrida, para que este possa completar um determinado número de voltas em um circuito, até o primeiro reabastecimento. Ler o comprimento da pista (em metros), o número total de voltas a serem percorridas, o número de reabastecimentos desejados e o consumo do carro (em Km/l). Em seguida, calcular e escrever o 
-  número mínimo de litros necessários para completar as voltas até o primeiro reabastecimento. Considerar que o número de voltas entre os reabastecimentos é o mesmo.`;
+  número mínimo de litros necessários para completar as voltas até o primeiro reabastecimento. Considerar que o número de voltas entre os reabastecimentos é o mesmo.
+  (AJUSTADO)`;
   public categoria: number = 1;
   public executar() {
     console.clear();
@@ -30,6 +31,8 @@ export class Exercicio20 implements ExerciciosBD {
     const primeiraParada =
       litrosNecessariosParaConcluirACorrida / numeroDeReabastecimentos;
 
+    const litrosPrimeiraParada = consumoPorVolta * primeiraParada;
+
     console.log(
       `Comprimento da Pista: ${comprimentoPista.toLocaleString('br')} km`
     );
@@ -52,6 +55,12 @@ export class Exercicio20 implements ExerciciosBD {
       )} litros`
     );
 
-    console.log(`Primeira Parada: ${primeiraParada.toFixed(0)}`);
+    console.log(
+      `Litros necessários até a primeira parada: ${litrosPrimeiraParada.toLocaleString(
+        'br'
+      )} litros`
+    );
+
+    console.log(`Primeira Parada: volta ${primeiraParada.toFixed(0)}`);
   }
 }
