@@ -13,7 +13,7 @@ export class Exercicio30 implements ExerciciosBD {
     );
     const idade = anoAtual - anoNascimento;
 
-    if (idade >= 18) {
+    if (idade >= 16) {
       console.log(`Você tem ${idade} anos e pode votar.`);
     } else {
       console.log(`Você tem ${idade} anos e não pode votar.`);

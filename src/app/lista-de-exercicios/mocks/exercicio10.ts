@@ -17,15 +17,15 @@ export class Exercicio10 implements ExerciciosBD {
       prompt('Leia o terceiro lado do triângulo')?.replace(',', '.').trim()
     );
     const ladosDoTriangulo = (s1 + s2 + s3) / 2;
-    const raizQuadrada = 1 / 2;
     const area =
       ladosDoTriangulo *
       (ladosDoTriangulo - s1) *
       (ladosDoTriangulo - s2) *
-      (ladosDoTriangulo - s3) *
-      raizQuadrada;
+      (ladosDoTriangulo - s3);
+
+    const resultado = Math.sqrt(area);
     console.log(
-      `A área do triângulo será de: ${area.toLocaleString('br', {
+      `A área do triângulo será de: ${resultado.toLocaleString('br', {
         minimumFractionDigits: 3,
         maximumFractionDigits: 3,
       })}`

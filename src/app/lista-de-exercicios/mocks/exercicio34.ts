@@ -5,7 +5,7 @@ export class Exercicio34 implements ExerciciosBD {
   que trabalha mais de 40h recebe hora extra cujo cálculo corresponde ao valor
   da hora regular com um acréscimo de 50%. Ler o número de horas trabalhadas
   em um mês, o salário por hora e escrever o salário total do funcionário que, se
-  for o caso, deve ser acrescido do valor das horas extras trabalhadas.`;
+  for o caso, deve ser acrescido do valor das horas extras trabalhadas.(AJUSTAR PARA O MES INTEIRO)`;
   public categoria: number = 2;
   public executar() {
     console.clear();

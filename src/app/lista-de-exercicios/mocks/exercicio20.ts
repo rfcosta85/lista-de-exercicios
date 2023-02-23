@@ -29,7 +29,9 @@ export class Exercicio20 implements ExerciciosBD {
     const litrosNecessariosParaConcluirACorrida =
       consumoPorVolta * numeroDeVoltasASerPercorrida;
     const primeiraParada =
-      litrosNecessariosParaConcluirACorrida / numeroDeReabastecimentos;
+      (comprimentoPista * numeroDeVoltasASerPercorrida) /
+      numeroDeReabastecimentos /
+      comprimentoPista;
 
     const litrosPrimeiraParada = consumoPorVolta * primeiraParada;
 

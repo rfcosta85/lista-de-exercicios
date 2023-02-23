@@ -4,7 +4,7 @@ export class Exercicio35 implements ExerciciosBD {
   public descricao: string = `Ler o salário fixo e o valor das vendas efetuadas por um vendedor de uma
   empresa. Sabendo-se que ele recebe uma comissão de 3% sobre o total das
   vendas, até R$1.500,00, mais 5% sobre o que ultrapassar este valor, calcular e
-  escrever o salário total do funcionário.`;
+  escrever o salário total do funcionário. (ajustar)`;
   public categoria: number = 2;
   public executar() {
     console.clear();

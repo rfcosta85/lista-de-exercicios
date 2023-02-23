@@ -2,7 +2,7 @@ import { ExerciciosBD } from './../models/exercicios.model';
 export class Exercicio29 implements ExerciciosBD {
   public numero: number = 29;
   public descricao: string = `Ler três valores A, B e C e escrever se podem ou não representar os lados
-    de um triângulo.`;
+    de um triângulo. (AJUSTAR)`;
   public categoria: number = 2;
   public executar() {
     console.clear();
@@ -23,11 +23,15 @@ export class Exercicio29 implements ExerciciosBD {
     console.log(`A + B = ${valorA + valorB}`);
     console.log(`A + C = ${valorA + valorC}`);
     console.log(`B + C = ${valorB + valorC}`);
+    const soma = valorA + valorB + valorC;
 
     if (
-      valorA + valorB > valorC &&
-      valorA + valorC > valorB &&
-      valorB + valorC > valorA
+      valorA + valorB < valorC &&
+      valorA + valorC < valorB &&
+      valorB + valorC < valorA &&
+      soma > valorA &&
+      soma > valorB &&
+      soma > valorC
     ) {
       console.log('Os valores podem representar os lados de um triângulo');
     } else {
