@@ -24,14 +24,18 @@ export class Exercicio29 implements ExerciciosBD {
     console.log(`A + C = ${valorA + valorC}`);
     console.log(`B + C = ${valorB + valorC}`);
     const soma = valorA + valorB + valorC;
+    console.log(`soma dos lados: ${valorA} + ${valorB} + ${valorC} = ${soma}`);
+    console.log(` A - B = ${valorA - valorB}`);
+    console.log(` A - C = ${valorA - valorC}`);
+    console.log(` B - C = ${valorB - valorC}`);
 
     if (
-      valorA + valorB < valorC &&
-      valorA + valorC < valorB &&
-      valorB + valorC < valorA &&
-      soma > valorA &&
-      soma > valorB &&
-      soma > valorC
+      (valorA + valorB < valorC &&
+        valorA + valorC < valorB &&
+        valorB + valorC < valorA &&
+        valorA > valorB - valorC) ||
+      valorB > valorA - valorC ||
+      valorC > valorA - valorB
     ) {
       console.log('Os valores podem representar os lados de um triângulo');
     } else {
