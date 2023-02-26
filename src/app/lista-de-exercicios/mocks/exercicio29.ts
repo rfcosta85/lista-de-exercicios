@@ -2,7 +2,7 @@ import { ExerciciosBD } from './../models/exercicios.model';
 export class Exercicio29 implements ExerciciosBD {
   public numero: number = 29;
   public descricao: string = `Ler três valores A, B e C e escrever se podem ou não representar os lados
-    de um triângulo. (AJUSTAR)`;
+    de um triângulo. (AJUSTADO)`;
   public categoria: number = 2;
   public executar() {
     console.clear();

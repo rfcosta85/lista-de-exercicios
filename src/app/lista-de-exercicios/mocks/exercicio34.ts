@@ -5,7 +5,7 @@ export class Exercicio34 implements ExerciciosBD {
   que trabalha mais de 40h recebe hora extra cujo cálculo corresponde ao valor
   da hora regular com um acréscimo de 50%. Ler o número de horas trabalhadas
   em um mês, o salário por hora e escrever o salário total do funcionário que, se
-  for o caso, deve ser acrescido do valor das horas extras trabalhadas.(AJUSTAR PARA O MES INTEIRO)`;
+  for o caso, deve ser acrescido do valor das horas extras trabalhadas.(AJUSTADO)`;
   public categoria: number = 2;
   public executar() {
     console.clear();
@@ -18,13 +18,16 @@ export class Exercicio34 implements ExerciciosBD {
     const salarioPorHora = Number(
       prompt('Digite o salário por hora: ')?.replace(',', '.').trim()
     );
+    const semanas = 4;
 
-    if (horasTrabalhadasMes > 40) {
+    if (horasTrabalhadasMes > 40 * semanas) {
       const horasSemanais = 40;
       const acrescimo = 0.5;
-      const horasExtras = horasTrabalhadasMes - 40;
+      const horasExtras = horasTrabalhadasMes - horasSemanais * semanas;
       const montanteHorasExtras = salarioPorHora + salarioPorHora * acrescimo;
-      const salarioTotal = horasSemanais * salarioPorHora + montanteHorasExtras;
+      const salarioSemHorasExtras = horasTrabalhadasMes * salarioPorHora;
+      const salarioTotal =
+        montanteHorasExtras + horasTrabalhadasMes * salarioPorHora;
       console.log(`Horas trabalhadas: ${horasTrabalhadasMes}`);
       console.log(`Salário por hora: ${salarioPorHora}`);
       console.log(`Horas Extras trabalhadas: ${horasExtras}`);
@@ -33,6 +36,16 @@ export class Exercicio34 implements ExerciciosBD {
           style: 'currency',
           currency: 'BRL',
         })}`
+      );
+
+      console.log(
+        `Salário sem hora extra: ${salarioSemHorasExtras.toLocaleString(
+          'pt-BR',
+          {
+            style: 'currency',
+            currency: 'BRL',
+          }
+        )}`
       );
       console.log(
         `Salário total: ${salarioTotal.toLocaleString('pt-BR', {
@@ -43,7 +56,12 @@ export class Exercicio34 implements ExerciciosBD {
     } else {
       const salarioTotal = horasTrabalhadasMes * salarioPorHora;
       console.log(`Horas trabalhadas: ${horasTrabalhadasMes}`);
-      console.log(`Salário por hora: ${salarioPorHora}`);
+      console.log(
+        `Salário por hora: ${salarioPorHora.toLocaleString('pt-BR', {
+          style: 'currency',
+          currency: 'BRL',
+        })}`
+      );
       console.log(
         `Salário total: ${salarioTotal.toLocaleString('pt-BR', {
           style: 'currency',
