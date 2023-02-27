@@ -1,8 +1,7 @@
 import { ExerciciosBD } from './../models/exercicios.model';
 export class Exercicio24 implements ExerciciosBD {
   public numero: number = 24;
-  public descricao: string =
-    'Ler três valores e escrever o menor deles. (AJUSTADO)';
+  public descricao: string = 'Ler três valores e escrever o menor deles.';
   public categoria: number = 2;
   public executar() {
     console.clear();

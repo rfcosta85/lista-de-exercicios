@@ -1,7 +1,7 @@
 import { ExerciciosBD } from './../models/exercicios.model';
 export class Exercicio26 implements ExerciciosBD {
   public numero: number = 26;
-  public descricao: string = `Ler dois valores e escrevê-los em ordem crescente. (AJUSTADO)`;
+  public descricao: string = `Ler dois valores e escrevê-los em ordem crescente.`;
   public categoria: number = 2;
   public executar() {
     console.clear();

@@ -2,7 +2,7 @@ import { ExerciciosBD } from './../models/exercicios.model';
 export class Exercicio10 implements ExerciciosBD {
   public numero: number = 10;
   public descricao: string =
-    'Ler os valores S1, S2 e S3 correspondentes aos comprimentos dos três lados de um triângulo, calcular e escrever a sua área. A área do triângulo é dada por: (AJUSTADO)';
+    'Ler os valores S1, S2 e S3 correspondentes aos comprimentos dos três lados de um triângulo, calcular e escrever a sua área. A área do triângulo é dada por:';
   public categoria: number = 1;
   public executar() {
     console.clear();
