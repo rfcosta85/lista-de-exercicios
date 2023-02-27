@@ -23,10 +23,18 @@ export class Exercicio36 implements ExerciciosBD {
     );
     const hora = horaFinal - horaInicio;
     const minuto = minutoFinal - minutoInicio;
-    if (horaInicio > horaFinal) {
+    if (horaInicio > horaFinal && minutoInicio > minutoFinal) {
+      console.log(
+        `O jogo durou ${24 - horaInicio + horaFinal} horas e ${
+          minuto * -1
+        } minutos`
+      );
+    } else if (horaInicio > horaFinal) {
       console.log(
         `O jogo durou ${24 - horaInicio + horaFinal} horas e ${minuto} minutos`
       );
+    } else if (horaInicio < horaFinal && minutoInicio > minutoFinal) {
+      console.log(`O jogo durou ${hora} horas e ${minuto * -1} minutos`);
     } else if (horaInicio < horaFinal) {
       console.log(`O jogo durou ${hora} horas e ${minuto} minutos`);
     } else if (horaInicio === horaFinal) {
