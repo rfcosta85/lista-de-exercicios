@@ -18,30 +18,36 @@ sim, escrever se o triângulo é retângulo, acutângulo ou obtusângulo`;
       prompt('Digite o valor do terceiro número: ')?.replace(',', '.').trim()
     );
 
-    if (valor1 < 90 && valor2 < 90 && valor3 < 90) {
+    if (valor1 <= 180 && valor2 <= 180 && valor3 <= 180) {
+      if (valor1 < 90 && valor2 < 90 && valor3 < 90) {
+        console.log(
+          `Um triângulo Acutângulo precisa ter os 3 lados com ângulos menores que 90, então:`
+        );
+        console.log(`lado A: ${valor1}°`);
+        console.log(`Lado B: ${valor2}°`);
+        console.log(`Lado C: ${valor3}°`);
+        console.log(`Temos um triângulo acutângulo`);
+      } else if (valor1 === 90 || valor2 === 90 || valor3 === 90) {
+        console.log(
+          `Um triângulo é retângulo quando um de seus ângulos é igual a 90°`
+        );
+        console.log(`lado A: ${valor1}°`);
+        console.log(`Lado B: ${valor2}°`);
+        console.log(`Lado C: ${valor3}°`);
+        console.log(`Temos um triângulo retângulo`);
+      } else if (valor1 > 90 || valor2 > 90 || valor3 > 90) {
+        console.log(
+          `Um triângulo é obtusângulo quando um dos seus ângulos é maior que 90°`
+        );
+        console.log(`lado A: ${valor1}°`);
+        console.log(`Lado B: ${valor2}°`);
+        console.log(`Lado C: ${valor3}°`);
+        console.log(`Temos um triângulo obsutsângulo`);
+      }
+    } else {
       console.log(
-        `Um triângulo Acutângulo precisa ter os 3 lados com ângulos menores que 90, então:`
+        `Os valores de um ângulo externo não podem ser maiores que 180°, portanto, não temos um triângulo`
       );
-      console.log(`lado A: ${valor1}°`);
-      console.log(`Lado B: ${valor2}°`);
-      console.log(`Lado C: ${valor3}°`);
-      console.log(`Temos um triângulo acutângulo`);
-    } else if (valor1 === 90 || valor2 === 90 || valor3 === 90) {
-      console.log(
-        `Um triângulo é retângulo quando um de seus ângulos é igual a 90°`
-      );
-      console.log(`lado A: ${valor1}°`);
-      console.log(`Lado B: ${valor2}°`);
-      console.log(`Lado C: ${valor3}°`);
-      console.log(`Temos um triângulo retângulo`);
-    } else if (valor1 > 90 || valor2 > 90 || valor3 > 90) {
-      console.log(
-        `Um triângulo é obtusângulo quando um dos seus ângulos é maior que 90°`
-      );
-      console.log(`lado A: ${valor1}°`);
-      console.log(`Lado B: ${valor2}°`);
-      console.log(`Lado C: ${valor3}°`);
-      console.log(`Temos um triângulo obsutsângulo`);
     }
 
     console.log(`Fonte: Brasil escola: ${fonte}`);

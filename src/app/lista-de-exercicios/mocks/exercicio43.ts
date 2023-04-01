@@ -30,6 +30,8 @@ export class Exercicio43 implements ExerciciosBD {
       case 5:
         console.log(`${x} ^ ${y} = ${x ** y}`);
         break;
+      default:
+        console.log('Operação inválida');
     }
   }
 }

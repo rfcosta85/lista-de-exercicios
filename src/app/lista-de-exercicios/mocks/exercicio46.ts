@@ -20,6 +20,12 @@ export class Exercicio46 implements ExerciciosBD {
       somaNumeros += inteiros;
     } while (resposta === 'sim');
 
-    console.log(`A soma dos números foi: ${somaNumeros}`);
+    console.log(`Numeros informados: ${arrayNumeros} `);
+
+    console.log(
+      `A soma dos números informados foi: ${somaNumeros.toLocaleString(
+        'pt-BR'
+      )}`
+    );
   }
 }
