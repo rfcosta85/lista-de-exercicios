@@ -4,7 +4,7 @@ export class Exercicio35 implements ExerciciosBD {
   public descricao: string = `Ler o salário fixo e o valor das vendas efetuadas por um vendedor de uma
   empresa. Sabendo-se que ele recebe uma comissão de 3% sobre o total das
   vendas, até R$1.500,00, mais 5% sobre o que ultrapassar este valor, calcular e
-  escrever o salário total do funcionário. (AJUSTADO)`;
+  escrever o salário total do funcionário.`;
   public categoria: number = 2;
   public executar() {
     console.clear();
@@ -16,10 +16,10 @@ export class Exercicio35 implements ExerciciosBD {
       prompt('Digite o valor das vendas: ')?.replace(',', '.').trim()
     );
 
-    if (vendaTotaisEmReais > 1500) {
+    const limiteDaComissao3Porcento = 1500;
+    if (vendaTotaisEmReais > limiteDaComissao3Porcento) {
       const comissaoTresPorcento = 0.03;
       const comissaoCincoPorcento = 0.05;
-      const limiteDaComissao3Porcento = 1499;
       const diferencaComissao = vendaTotaisEmReais - limiteDaComissao3Porcento;
       const calculoComissaoTresPorcento =
         vendaTotaisEmReais - diferencaComissao;

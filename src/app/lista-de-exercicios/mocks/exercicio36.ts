@@ -4,7 +4,7 @@ export class Exercicio36 implements ExerciciosBD {
   public descricao: string = `Ler os horários de início e de fim de um jogo de xadrez, calcular e escrever
   a duração do jogo em horas e minutos. Considere que o tempo máximo de
   duração de um jogo é de 24h e que uma partida pode iniciar em um dia e
-  terminar no dia seguinte. (AJUSTADO)`;
+  terminar no dia seguinte. (AJUSTAR) - Valor menor que uma hora, precisa ser ajustado`;
   public categoria: number = 2;
   public executar() {
     console.clear();

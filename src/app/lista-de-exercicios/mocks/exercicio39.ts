@@ -2,7 +2,7 @@ import { ExerciciosBD } from './../models/exercicios.model';
 export class Exercicio39 implements ExerciciosBD {
   public numero: number = 39;
   public descricao: string = `Ler três valores e escrever se representam os ângulos de um triângulo. Se
-sim, escrever se o triângulo é retângulo, acutângulo ou obtusângulo`;
+sim, escrever se o triângulo é retângulo, acutângulo ou obtusângulo (AJUSTAR)`;
   public categoria: number = 2;
   public executar() {
     console.clear();

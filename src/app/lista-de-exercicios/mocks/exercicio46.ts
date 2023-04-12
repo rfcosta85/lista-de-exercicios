@@ -2,7 +2,7 @@ import { ExerciciosBD } from '../models/exercicios.model';
 
 export class Exercicio46 implements ExerciciosBD {
   public numero: number = 46;
-  public descricao: string = `Ler um conjunto de valores inteiros e positivos, calcular e escrever a soma e o produto desses valores.`;
+  public descricao: string = `Ler um conjunto de valores inteiros e positivos, calcular e escrever a soma e o produto desses valores. (AJUSTAR)`;
   public categoria: number = 3;
   public executar() {
     console.clear();
@@ -10,6 +10,7 @@ export class Exercicio46 implements ExerciciosBD {
     let resposta: any = 'sim';
     let arrayNumeros = [];
     let somaNumeros = 0;
+    let multiplicaNumeros = 1;
     do {
       const inteiros = Number(prompt('Digite um numero'));
       let getResposta = prompt('Deseja continuar? ')
